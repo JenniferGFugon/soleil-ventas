@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Soleil — Registrar Venta</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Soleil</h1>
+    <p class="subtitle">Registrar ventas — sencillo y moderno</p>
+  </header>
+  <main class="container">
+    <section class="card">
+      <h2>Nuevo pedido</h2>
+      <div class="row">
+        <label>Costo de envío</label>
+        <input id="shippingCost" type="number" step="0.01" value="0">
+      </div>
+      <div class="row">
+        <label>Número de productos</label>
+        <input id="numProducts" type="number" min="1" value="1">
+      </div>
+      <h3>Detalle de productos</h3>
+      <table id="itemsTable">
+        <thead>
+          <tr><th>Producto</th><th>Precio compra</th><th>Precio venta</th><th></th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="addItemBtn" class="btn small">Agregar producto</button>
+      <div class="row space-between">
+        <div>
+          <label>Total calculado:</label>
+          <div id="calculatedTotal">0.00</div>
+        </div>
+        <button id="saveOrderBtn" class="btn primary">Guardar pedido</button>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Pedidos guardados</h2>
+      <div id="ordersList">Cargando...</div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
